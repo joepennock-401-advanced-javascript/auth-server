@@ -1,0 +1,35 @@
+{
+  "name": "auth-server",
+  "version": "1.0.0",
+  "description": "Simple authentication server for signup/signin routes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node indes.js",
+    "lint": "eslint **/*.js",
+    "test": "jest --verbose --coverage",
+    "watch": "jest --watchAll --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penjoe/auth-server.git"
+  },
+  "keywords": [
+    "auth",
+    "server",
+    "express"
+  ],
+  "author": "Joe Pennock",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/penjoe/auth-server/issues"
+  },
+  "homepage": "https://github.com/penjoe/auth-server#readme",
+  "dependencies": {
+    "base-64": "^0.1.0",
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.4"
+  }
+}
