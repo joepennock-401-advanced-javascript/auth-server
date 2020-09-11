@@ -1,29 +1,28 @@
 [ANOTHER README EXAMPLE HERE](https://github.com/codefellows/seattle-javascript-401n17/blob/master/reference/submission-instructions/labs/example/README.md)
 
-# LAB - Class xx
+# LAB - Class 11
 
-## Project: Project Name Here
+## Project: Auth Server
 
-### Author: Student/Group Name
+### Author: Joe Pennock
 
 ### Links and Resources
 
 - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
 - [front-end application](http://xyz.com) (when applicable)
+- [GitHub PR]()
 
 ### Setup
 
 #### `.env` requirements (where applicable)
 
-i.e.
-
-- `PORT` - Port Number
-- `MONGODB_URI` - URL to the running mongo instance/db
+- `PORT` - 3000
+- `MONGODB_URI` - mongodb://localhost:27017/auth
 
 #### How to initialize/run your application (where applicable)
 
-- e.g. `npm start`
+- Start the server with `npm index.js`
 
 #### How to use your library (where applicable)
 

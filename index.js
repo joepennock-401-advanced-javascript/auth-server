@@ -14,4 +14,4 @@ mongoose.connect(process.env.MONGODB_URI, {
 });
 
 /** Establish connection to server */
-server.start(process.env.PORT);
+server.server(process.env.PORT);

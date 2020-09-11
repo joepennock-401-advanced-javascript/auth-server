@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 /** Run custom middleware modules */
 
 const start = function(port){
-  app.listen(port, console.log('Server running on port ', PORT));
+  app.listen(port, console.log('Server running on port ', port));
 };
 
 module.exports = {
