@@ -17,6 +17,6 @@ const start = function(port){
 };
 
 module.exports = {
-  server: start,
-  app: app,
+  start,
+  app,
 };
