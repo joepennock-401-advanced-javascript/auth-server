@@ -22,7 +22,7 @@ describe('Test suite for auth signup/signin routes.', () => {
     
   });
 
-  it('Should reqpond with a 404 when using invalid data to signup.', async () => {
+  it('Should reqpond with a 401/failed signup when using invalid data to signup.', async () => {
 
     let obj = {
       foo: "bar",
@@ -30,7 +30,7 @@ describe('Test suite for auth signup/signin routes.', () => {
 
     let res = await req.post('/auth/v1/signup').send(obj);
     console.log(res.error);
-    expect(res.status).toEqual(404);
+    expect(res.status).toEqual(401);
     
   });
 

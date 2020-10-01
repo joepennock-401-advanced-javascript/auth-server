@@ -40,7 +40,7 @@ router.post('/signup', async function (req, res, next) {
   } catch(err) {
 
     console.log('404 error in auth router')
-    res.status(401).send('Signin failed, please try again.');
+    res.status(401).send('Signup failed, please try again.');
     next(err.message);
 
   };
