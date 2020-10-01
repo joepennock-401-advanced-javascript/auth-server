@@ -1,5 +1,10 @@
 'use strict';
 
 module.exports = (error, req, res, next) => {
-  res.status(500).send(error);
+
+  let errMsg = {
+    error,
+    message: "500 Server Error - Please Try Again"
+  }
+  res.status(500).json(errMsg);
 };

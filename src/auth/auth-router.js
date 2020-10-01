@@ -24,15 +24,15 @@ router.post('/signup', async function (req, res, next) {
 
     // A new instance of the user schema, containing new user sign in data
     let record = await new User(obj);
-    console.log({record});
+    // console.log({record});
 
     // Add the new user to the database
     let newUser = await record.save();
-    console.log({newUser});
+    // console.log({newUser});
 
     // Get a new JWT token
     let token = record.getToken();
-    console.log({token});
+    // console.log({token});
 
     // respond with 201 and send the token back
     res.status(201).send(token);

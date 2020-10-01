@@ -22,10 +22,10 @@ users.methods.getToken = function () {
 users.statics.validation = async function (un, pw) {
 
   const user = await this.findOne({ username: un });
-  console.log({user});
+  // console.log({user});
 
   let match = await bcrypt.compare(pw, user.password);
-  console.log({match});
+  // console.log({match});
 
   if (match) {
     return user;

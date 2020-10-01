@@ -18,16 +18,16 @@ const basicAuth = async (req, res, next) => {
 
     // Where does the encoding happen?
     let authHeader = req.headers.authorization;
-    console.log({authHeader});
+    // console.log({authHeader});
     let encoded = authHeader.split(' ')[1];
-    console.log({encoded});
+    // console.log({encoded});
     let decoded = base64.decode(encoded);
-    console.log({decoded});
+    // console.log({decoded});
     let [un, pw] = decoded.split(":");
-    console.log('U/P', [un, pw]);
+    // console.log('U/P', [un, pw]);
 
     let validUser = await users.validation(un, pw);
-    console.log({validUser});
+    // console.log({validUser});
 
     req.token = validUser.getToken();
     req.user = validUser;
@@ -35,7 +35,7 @@ const basicAuth = async (req, res, next) => {
     next();
 
   } catch(err) {
-    console.log(err);
+    // console.log(err);
     next('Login error');
   };
 

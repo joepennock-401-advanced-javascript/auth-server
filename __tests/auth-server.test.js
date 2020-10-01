@@ -1,10 +1,6 @@
 'use strict';
 
-/*
-Auth-router minimum tests
-1. POST to /signup to create a new user
-2. POST to /signin to login as a user (use basic auth)
-*/
+/* Test suites for auth signup/signin routes */
 
 /** Require 3rd party dependencies */
 require('dotenv').config();
@@ -17,7 +13,30 @@ const server = require('../src/server.js');
 /** Testing related middleware */
 const req = supergoose(server.app);
 
-describe('Auth router tests', () => {
+describe('Test suite for auth signup/signin routes.', () => {
+
+  it('Sending a request to a bad/non-existent route will trigger a 404 not-found error', async () => {
+
+    let res = await req.get('/bad').send('test');
+    expect(res.status).toEqual(404);
+    
+  });
+
+  it('Should reqpond with a 404 when using invalid data to signup.', async () => {
+
+    let obj = {
+      foo: "bar",
+    };
+
+    let res = await req.post('/auth/v1/signup').send(obj);
+    console.log(res.error);
+    expect(res.status).toEqual(404);
+    
+  });
+
+  it('Will trigger a 500 server error', () => {
+    
+  });
 
   it('POST to /signup will create a new user.', async () => {
 
@@ -36,7 +55,6 @@ describe('Auth router tests', () => {
   it('POST to /signin will login as a user using basic auth', async () => {
 
     let res = await req.post('/auth/v1/signin').auth("authTest", "1234");
-    console.log('res in tests', res.body);
     expect(res.body.user._id).toBeDefined();
     expect(res.body.token).toBeDefined();
     expect(res.body.user.username).toEqual("authTest");
