@@ -8,10 +8,10 @@
 
 ### Links and Resources
 
-- [ci/cd](http://xyz.com) (GitHub Actions)
-- [back-end server url](http://xyz.com) (when applicable)
-- [front-end application](http://xyz.com) (when applicable)
-- [GitHub PR]()
+- [ci/cd](https://github.com/joepennock-401-advanced-javascript/auth-server/actions) (GitHub Actions)
+<!-- - [back-end server url](http://xyz.com) (when applicable) -->
+<!-- - [front-end application](http://xyz.com) (when applicable) -->
+- [GitHub PR](https://github.com/joepennock-401-advanced-javascript/auth-server/pull/1)
 
 ### Setup
 
@@ -28,10 +28,10 @@
 
 #### Tests
 
-- How do you run tests?
-- Any tests of note?
-- Describe any tests that you did not complete, skipped, etc
+- Run tests with `npm test <file-name>`
+- This server has basic unit tests to check for ability to signup/signin with basic authentication
+- Future tests will include more robust testing of middleware and added validation on edge cases
 
 #### UML
 
-Link to an image of the UML for your application and response to events
+<!-- Link to an image of the UML for your application and response to events -->
